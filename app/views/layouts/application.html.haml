@@ -1,0 +1,48 @@
+!!!
+%html
+  %head
+    %title
+      Rental homes
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "common"
+    = requirejs_include_tag "application"
+    :javascript
+      window.current_user = #{current_user.to_json} || #{User.new.to_json}
+      require.config({baseUrl: "/assets", urlArgs: "" + (new Date()).getTime() + "="})
+    = csrf_meta_tags
+  %body
+    = render 'layouts/top_menu'
+    = yield 'slider'
+    .container
+      .bs-docs-section.clearfix
+        .row#container
+          .index_slider
+          = yield
+      .hFooter
+    .footer
+      .container
+        .footer-inner
+          2013 © Norma RTI.
+          %p
+            Контактная информация
+            = succeed "." do
+              %a{href:'#'} Thomas Park
+            = succeed "." do
+              %a{href: "mailto:a@mail.ru"} hello@thomaspark.me
+            %p
+              Code licensed under the
+              = succeed "." do
+                %a{href: "."} Apache License v2.0
+            %p
+              Based on
+              = succeed "." do
+                %a{href: "."} Bootstrap
+              = succeed "." do
+                %a{href: "."} Font Awesome
+              = succeed "." do
+                %a{href: "."} Google
+              = succeed "." do
+                %a{href: "."} Gerald Hiller
+        .footer-tools
+          %span.go-top
+            %i.icon-angle-up

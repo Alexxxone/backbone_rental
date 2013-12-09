@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails BackboneRental: development" uuid="7b28eb8c-b906-466c-bca5-528905158f4d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BackboneRental: test" uuid="ef875ce8-bded-4532-967a-9d73ac4f32b3">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails BackboneRental: production" uuid="7a666071-9318-4b89-a809-b0044f0c8b96">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

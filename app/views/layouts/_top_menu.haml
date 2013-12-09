@@ -1,0 +1,58 @@
+.navbar.navbar-default.navbar-fixed-top
+  .container
+    .navbar-header
+      %a.navbar-brand{href: root_path} Норма
+      %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", type: "button"}
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+
+    .navbar-collapse.collapse.navbar-responsive-collapse
+      %ul.nav.navbar-nav
+        %li.active
+          %a{href: "#"} Active
+        %li
+          %a{href: "#"} Link
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            Dropdown
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{href: "#"} Action
+            %li
+              %a{href: "#"} Another action
+            %li
+              %a{href: "#"} Something else here
+            %li.divider
+            %li.dropdown-header Dropdown header
+            %li
+              %a{href: "#"} Separated link
+            %li
+              %a{href: "#"} One more separated link
+      %form.navbar-form.navbar-left
+        %input.form-control.col-lg-8{placeholder: "Поиск по товарам", type: "text"}/
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{href: "#"} Link
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            Dropdown
+            %b.caret
+          %ul.dropdown-menu
+            - if user_signed_in?
+              %li
+                = link_to t('.logout'), destroy_user_session_path, :method=>'delete'
+            - else
+              %li
+                = link_to t('.login'), new_user_session_path
+            - if user_signed_in?
+              %li
+                = link_to t('.edit_account'), edit_user_registration_path
+            - else
+              %li
+                = link_to t('.sign_up'), new_user_registration_path
+            %li.divider
+            %li
+              %a{href: "#"} Separated link
+              %ul.nav

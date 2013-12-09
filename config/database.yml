@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rental_dev
+  host: localhost
+  username: alex
+  password: alexxxone89
+test:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: rental_test
+  username: alex
+  password: alexxxone89
+  
+production:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: rental_prod
+  username: alex
+  password: alexxxone89
+
+
+
