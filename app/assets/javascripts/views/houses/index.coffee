@@ -2,7 +2,7 @@ define [
   "chaplin/views/view",
   "text!templates/index.hbs",
   "models/houses",
-  "text!templates/indexView.hbs"
+  "text!templates/indexView.hbs",
 ]
 , (View, template, Houses, template2)->
   class HouseItemView extends View
@@ -14,7 +14,8 @@ define [
       @delegate "click", "img.image", @show
     show: ->
       id =@model.attributes.id
-      Backbone.history.navigate "houses/#{id}", { trigger: true}
+      console.log id
+      Backbone.history.navigate "/houses/#{id}", { trigger: true, replace: true}
   class HouseIndexView extends HouseItemView
     tagName: 'ul'
     className: 'row'

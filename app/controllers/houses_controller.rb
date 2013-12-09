@@ -3,7 +3,7 @@ class HousesController < ApplicationController
   def index
     respond_to do |block|
       block.html
-      block.json {render :json =>  House.all}
+      block.json {render :json =>  House.limit(4)}
     end
   end
   def show

@@ -11,10 +11,8 @@ define [
     index: ->
       console.log 'HouseController'
       houses = new Houses
-#      houses.fetch
       @view = new IndexView(collection: houses)
     show: ->
       console.log 'HouseController action SHOW'
       house = new House
-      house.fetch
       @view = new ShowView(model: house)

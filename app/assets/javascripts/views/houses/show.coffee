@@ -5,7 +5,6 @@ define [
 , (View, template)->
   'use strict'
   class HouseShowView extends View
-    tagName: 'div'
     template: template
     autoRender: true
     initialize: ->
