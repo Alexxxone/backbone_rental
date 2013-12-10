@@ -30,7 +30,13 @@
 @import "rs-style";
 @import "settings";
 @import "bootstrap.min";
+@import "jquery.gritter";
 
+body{
+  background-image: url(bg.jpg);
+  background-repeat: repeat;
+  background-position: center;
+}
 
 body a:hover{
     color:black;
@@ -38,6 +44,12 @@ body a:hover{
 }
 body .container{
     min-height:100%;
+}
+body .navbar-default{
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.39);
+  &:hover{
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.39);
+  }
 }
 .alert{
     color:red;

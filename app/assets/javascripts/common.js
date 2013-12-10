@@ -1,3 +1,4 @@
+/*
 //= require jquery
 //= require jquery_ujs
 //= require underscore
@@ -11,7 +12,8 @@
 //= require app
 //= require jquery.themepunch.plugins.min
 //= require jquery.themepunch.revolution.min
-
+//= require jquery.gritter.min
+*/
 $(document).ready(function() {
     console.log('common.js');
     $(".username").focus(function() {
@@ -29,4 +31,16 @@ $(document).ready(function() {
     });
 
     App.init();
+
+   $('body .navbar-default').mouseenter(function() {
+       $(this).animate({
+           zoom: "+=10%"
+       }, 200);
+   });
+    $('body .navbar-default').mouseleave(function() {
+        $(this).animate({
+            zoom: "-=10%"
+        }, 200);
+    });
+
 });

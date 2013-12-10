@@ -1,31 +1,32 @@
 define [
-  "chaplin/views/view",
+  "chaplin/views/collection_view",
   "text!templates/index.hbs",
-  "models/houses",
-  "text!templates/indexView.hbs",
+  'views/houses/item_index',
+#  'chaplin/mediator'
+  'chaplin/lib/helpers'
+
 ]
-, (View, template, Houses, template2)->
-  class HouseItemView extends View
-    tagName: 'li'
-    className: 'house-box'
-    template: template2
-    autoRender: true
-    initialize: ->
-      @delegate "click", "img.image", @show
-    show: ->
-      id =@model.attributes.id
-      console.log id
-      Backbone.history.navigate "/houses/#{id}", { trigger: true, replace: true}
-  class HouseIndexView extends HouseItemView
+, (CollectionView, template, ItemIndexView,mediator)->
+  'use strict'
+  class HouseIndexView extends CollectionView
+    @.$el = template
     tagName: 'ul'
     className: 'row'
     template: template
-    container: '#container'
+    itemView: ItemIndexView
+    container: '.row#container'
+    autoRender: true
+    containerMethod: 'html'
     initialize: ->
-      @collection.bind('reset',@render)
-      @collection.fetch success: (collection) ->
-        render(collection)
-    render =(collection)->
-      collection.each (val) ->
-        view = new HouseItemView({model: val,collection :collection})
-        $(@container).find('ul').append(view.render().el)
+      super
+      $(".navbar-brand").click(@home)
+    home: ->
+      console.log 'home'
+#      redirectTo('house#index')
+#      !router:'house#index'
+#      mediator.execute 'router:route', ''
+      mediator.redirectTo '/'
+#      Backbone.history.navigate "/", { trigger: true,replace: true }
+
+
+

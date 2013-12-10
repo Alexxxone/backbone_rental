@@ -6,9 +6,14 @@ define [
   'use strict'
   class HouseShowView extends View
     template: template
+    container: '.row#container'
     autoRender: true
+    containerMethod: 'html'
     initialize: ->
-      console.log @model
+#      @getTemplateFunction
+#      console.log @template
 #      @delegate "click", ".image", @show
-#    show: ->
-#      @model
+
+#    getTemplateFunction: ->
+#      template = $('#template-contact').html()
+#      console.log template

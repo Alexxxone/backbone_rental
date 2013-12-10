@@ -1,16 +1,13 @@
   <div class="panel panel-default">
+    <i class='icon-remove delete pull-right'></i>
     <div class="panel-body">
-      <span class='image'>
-        <img src='heroku/{{ filename }}' height='100' alt ='asd'/>
-      </span>
+      <img src='heroku/{{ filename }}' height='100' alt ='asd' class='image'/>
       <div class="house_info">
-
         <p> {{title}}</p>
-        <p>Location :
-               {{location}}</p>
+        <p>Location :{{location}}</p>
         <p> {{description}}</p>
-        <p>  Maximum people :
-               {{number_of_people}}</p>
+        <p class='house_change'>Maximum people :{{number_of_people}}
+        </p>
       </div>
     </div>
   </div>

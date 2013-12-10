@@ -4,3 +4,4 @@ define [
 , (Model) ->
   'use strict'
   class House extends Model
+    urlRoot: "/houses"
