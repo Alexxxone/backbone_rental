@@ -7,4 +7,6 @@ shim:
     exports: 'Backbone'
   underscore:
     exports: '_'
-  jquery.smartbanner: ['jquery']
+modules:
+  - name: 'houses'
+wrap: true

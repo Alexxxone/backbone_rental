@@ -38,8 +38,8 @@ module Backbone2
     config.encoding = "utf-8"
     config.serve_static_assets = false
     config.requirejs.loader = :almond
-    config.requirejs.logical_asset_filter += [/\.templ$/]
-
+    #config.requirejs.logical_asset_filter += [/\.templ$/]
+    config.requirejs.logical_asset_filter += [/\.hbs$/]
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
 

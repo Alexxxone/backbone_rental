@@ -3,11 +3,12 @@ define [
   "text!templates/indexView.hbs"
 ]
 , (View, template )->
+  'use strict'
   class HouseItemView extends View
     tagName: 'li'
     className: 'house-box'
     template: template
-    container: '#content'
+    container: '#index_content'
     autoRender: false
     initialize: ->
       @model.on 'change', () ->
@@ -21,7 +22,7 @@ define [
       id = @model.attributes.id
       Backbone.history.navigate "/houses/#{id}", { trigger: true}
     changes: ->
-      @model.set(title: 'asdasdasdasdasd')
+      @model.set(title: 'changed')
     destroy: ->
       @model.destroy success: ->
         console.log 'deleted'

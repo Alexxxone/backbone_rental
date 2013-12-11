@@ -2,31 +2,30 @@ define [
   "chaplin/views/collection_view",
   "text!templates/index.hbs",
   'views/houses/item_index',
-#  'chaplin/mediator'
   'chaplin/lib/helpers'
 
 ]
 , (CollectionView, template, ItemIndexView,mediator)->
   'use strict'
   class HouseIndexView extends CollectionView
-    @.$el = template
-    tagName: 'ul'
-    className: 'row'
     template: template
     itemView: ItemIndexView
     container: '.row#container'
     autoRender: true
+    renderItems: true
     containerMethod: 'html'
+#    listSelector: '#index_content'
+    loadingSelector: '.spinner'
     initialize: ->
       super
+#      temp = $('#tmpl').html()
       $(".navbar-brand").click(@home)
+#      template1 = Handlebars.compile(temp)
+      console.log $(template).find('#tmpl')
     home: ->
-      console.log 'home'
-#      redirectTo('house#index')
-#      !router:'house#index'
-#      mediator.execute 'router:route', ''
       mediator.redirectTo '/'
-#      Backbone.history.navigate "/", { trigger: true,replace: true }
+    render: ->
+      super
 
 
 
