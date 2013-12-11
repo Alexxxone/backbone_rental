@@ -3,7 +3,7 @@ paths:
   jquery: '../jquery'
 shim:
   backbone:
-    deps: ['underscore', 'jquery']
+    deps: ['underscore', 'jquery','handlebars','require']
     exports: 'Backbone'
   underscore:
     exports: '_'

@@ -71,7 +71,7 @@
       <file leaf-file-name="requirejs.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/requirejs.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.16963351" vertical-offset="0" max-vertical-offset="955">
+            <state line="5" column="55" selection-start="118" selection-end="118" vertical-scroll-proportion="0.09424084" vertical-offset="0" max-vertical-offset="955">
               <folding />
             </state>
           </provider>
@@ -209,6 +209,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackboneRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BackboneRental" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="javascripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -886,7 +912,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/requirejs.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="32" selection-start="185" selection-end="185" vertical-scroll-proportion="0.16963351" vertical-offset="0" max-vertical-offset="955">
+        <state line="5" column="55" selection-start="118" selection-end="118" vertical-scroll-proportion="0.09424084" vertical-offset="0" max-vertical-offset="955">
           <folding />
         </state>
       </provider>
