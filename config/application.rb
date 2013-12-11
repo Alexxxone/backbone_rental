@@ -36,7 +36,7 @@ module Backbone2
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
-
+    config.serve_static_assets = false
     config.requirejs.loader = :almond
     config.requirejs.logical_asset_filter += [/\.templ$/]
 
