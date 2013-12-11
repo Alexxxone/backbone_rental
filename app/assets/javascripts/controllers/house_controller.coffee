@@ -16,6 +16,9 @@ define [
         console.log 'ERROR CALLBACK'
 #        new Alerts message: xhr
       @houses.fetch error: errorCallback
+      @houses.fetch success: succ
+
+      succ =()->
       @view = new IndexView collection: @houses
     show: ->
       console.log 'HouseController action SHOW'

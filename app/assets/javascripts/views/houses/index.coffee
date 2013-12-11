@@ -5,27 +5,33 @@ define [
   'chaplin/lib/helpers'
 
 ]
-, (CollectionView, template, ItemIndexView,mediator)->
+, (CollectionView, template, ItemIndexView,helpers)->
   'use strict'
   class HouseIndexView extends CollectionView
+
     template: template
     itemView: ItemIndexView
-    container: '.row#container'
-    autoRender: true
-    renderItems: true
+    container: '#container_for'
+    autoRender: false
     containerMethod: 'html'
-#    listSelector: '#index_content'
+    listSelector: '#index_content'
     loadingSelector: '.spinner'
+    animationStartClass: 'start'
+    animationEndClass: 'stop'
+    _templatePath: "templates/index"
     initialize: ->
       super
-#      temp = $('#tmpl').html()
       $(".navbar-brand").click(@home)
-#      template1 = Handlebars.compile(temp)
-      console.log $(template).find('#tmpl')
+      console.log @template
+#      @rendera()
+
     home: ->
-      mediator.redirectTo '/'
-    render: ->
-      super
+      console.log 'home'
+      helpers.redirectTo '/'
+
+#    rendera: ->
+#      $(@el).prepend(@template)
+
 
 
 

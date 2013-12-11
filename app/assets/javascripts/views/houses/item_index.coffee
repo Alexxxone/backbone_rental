@@ -20,7 +20,8 @@ define [
       @delegate "click", ".delete", @destroy
     show: ->
       id = @model.attributes.id
-      Backbone.history.navigate "/houses/#{id}", { trigger: true}
+      console.log id
+      Backbone.history.navigate "/houses/#{id}", { trigger: true,replace: true }
     changes: ->
       @model.set(title: 'changed')
     destroy: ->
