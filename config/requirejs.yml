@@ -1,5 +1,10 @@
-modules:
-  - name: 'application'
 paths:
-  'text': 'require-text'
-
+  app: '../app'
+  jquery: '../jquery'
+shim:
+  backbone:
+    deps: ['underscore', 'jquery']
+    exports: 'Backbone'
+  underscore:
+    exports: '_'
+  jquery.smartbanner: ['jquery']
